@@ -59,12 +59,7 @@ export default function TransitionsModal({ action }) {
       >
         <Fade in={open}>
             <div className={classes.paper}>
-              <h3 className='ModalTitle'> Are you sure to sign out? </h3>
-                <div style={{ width: '80%', margin: 'auto' }}>
-                    <label className='LabeltextModal'>
-                        Remember that if you log out, you must create a new account the next time you want to login.
-                    </label>
-                </div>
+              <h3 className='ModalTitle'> ¿Estás seguro de cerrar sesión? </h3>               
                 <div className='buttonContainer'>
                     <div className='AceptButtonContainer'>
                         <button className='AceptButton' onClick={action}> Yes </button>

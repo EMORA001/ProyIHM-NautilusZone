@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.css';
+import './index.css';
 import NavigationBar from '../../commons/NavigationBar';
 import { useState, useEffect, useRef } from 'react';
 import * as tf from "@tensorflow/tfjs";
@@ -88,51 +88,49 @@ const Home = () => {
 	}
 
 	return (
-		<div className="HomeContainer">
-			<NavigationBar text='IDENTIFICADOR DE ESPECIES' />
-			<h3>Registro de especies</h3>
-				<div>
-                            <SocialMedia />
-                </div>
-			<div className='inputHolder'>
-				<input type='file' accept='image/*' capture='camera' className='uploadInput' onChange={uploadImage} ref={fileInputRef} />
-				<button className='uploadImage' onClick={triggerUpload}>Subir imagen</button>
-				<span className='or'>OR</span>
-				<input type="text" placeholder='Paster image URL' ref={textInputRef} onChange={handleOnChange} />
-			</div>
-			<div className="mainWrapper">
-				<div className="mainContent">
-					<div className="imageHolder">
-						{imageURL && <img src={imageURL} alt="Upload Preview" width="20%" height="20%" crossOrigin="anonymous" ref={imageRef} />}
-					</div>
-					{results.length > 0 && <div className='resultsHolder'>
-						{results.map((result, index) => {
-							return (
-								<div className='TitleComponent' key={result.className}>
-									<table border="1" cellpadding="1" bordercolor="#00CC66">
+		
+        <div className="App">
+			<NavigationBar text='Registro de Especies'/>
+            <div className='inputHolder'>
+                <input type='file' accept='image/*' capture='camera' class='boton_personalizado'onChange={uploadImage} ref={fileInputRef} />
+ 
+ 
+                <div ref={textInputRef} onChange={handleOnChange} />
+            </div>
+            <div className="mainWrapper">
+                <div className="mainContent">
+                    <div className="imageHolder">
+                        {imageURL && <img src={imageURL} alt="Upload Preview" class="img" crossOrigin="anonymous" ref={imageRef} />}
+                    </div>
+                    {results.length > 0 && <div className='resultsHolder'>
+                        {results.map((result, index) => {
+                            return (
+                                <div className='result' key={result.className}>
+									<table class='table'>
 										<tr><span className='name'>{result.className}</span></tr>
-										<tr><span className='LabelItemComponent'>Nivel de confiabilidad: {(result.probability * 100).toFixed(2)}% {index === 0 && <span className='bestGuess'>Best Guess</span>}</span></tr>
+										<tr><span className='confidence'>Nivel de confiabilidad:: {(result.probability * 100).toFixed(2)}% {index === 0 && <span className='bestGuess'>Best Guess</span>}</span></tr>
 									</table>
-								</div>
-							)
-						})}
-					</div>}
-				</div>
-				{imageURL && <button className='button' onClick={identify}>Analizar Imagen</button>}
-			</div>
-			{history.length > 0 && <div className="recentPredictions">
-				<h2>Imagenes Recientes</h2>
-				<div>
-					{history.map((image, index) => {
-						return (
-							<div key={`${image}${index}`}>
-								<img src={image} alt='Recent Prediction' onClick={() => setImageURL(image)} width="10%" height="10%"/>
-							</div>
-						)
-					})}
-				</div>
-			</div>}
-		</div>
+                                </div>
+                            )
+                        })}
+                    </div>}
+                </div>
+                {imageURL && <button class='boton_personalizado' onClick={identify}>Analizar Imagen</button>}
+            </div>
+            {history.length > 0 && <div className="recentPredictions">
+				<hr></hr><br></br>
+                <h2 >Imagenes Recientes</h2> 
+                <div className="recentImages"><br></br>
+                    {history.map((image, index) => {
+                        return (
+                            <div className="recentPrediction" key={`${image}${index}`}>
+                                <img src={image} alt='Recent Prediction' onClick={() => setImageURL(image)}margin-left="3%" width="10%"  />
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>}
+        </div>
 	);
 };
 

@@ -5,8 +5,17 @@
 }
 
 .HomeContent {
-    width: 100%;
+    width: 10%;
     height: 100%;
+}
+.img{
+
+    margin-left: 1%;
+    width:30%;
+    height:30%;
+}
+.mainWrapper {
+    padding: 0 10px;
 }
 
 .Home {
@@ -20,7 +29,7 @@
     font-size: 150px;
     font-family: 'Quicksand';
     margin: 0;
-    color: #1eb53579;
+    color: #1883ba;
     display: flex;
     justify-content: start;
     align-items: flex-start;
@@ -40,9 +49,10 @@
 }
 
 .HomeLabel {
+    margin-left: 0.5%;
     font-size: 16px;
     font-family: 'Quicksand';
-    color: #022908df;
+    color: #1883ba;
     display: flex;
     justify-content: start;
     align-items: flex-start;
@@ -53,7 +63,7 @@
 .NavigationBarContainer {
     width: 100%;
     height: 45px;
-    background: #03560fb0;
+    background: #1883ba;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,7 +91,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background: #1eb53579;
+    background: #1883ba;
     opacity: 0.6;
 }
 
@@ -108,20 +118,20 @@
 .CancelButton {
     width: 100%;
     height: 45px;
-    background: #022d09df;
+    background: #1883ba;
     color: #ffffff;
     font-family: 'Quicksand';
     font-size: 16px;
     border-radius: 30px;
     border: none;
-    opacity: 0.9;
+    opacity: 0.7;
     outline: none;
 }
 
 .AceptButton {
     width: 100%;
     height: 45px;
-    background: #022d09df;
+    background: #1883ba;
     color: #ffffff;
     font-family: 'Quicksand';
     font-size: 16px;
@@ -132,34 +142,25 @@
 
 .buttonContainer {
     display: flex;
-    width: 100%;
+    width: 30%;
     height: 80px;
     justify-content: space-around;
     align-items: center;
 }
 
 .AceptButtonContainer {
-    width: 45%;
+    width: 40%;
 }
 
 .CancelButtonContainer {
-    width: 45%;
-}
-
-.ModalTitle {
-    font-size: 20px;
-    font-family: 'Quicksand';
-    color: #022d09df;
-    font-weight: 800;
-    text-align: center;
-    margin: 10px
+    width: 40%;
 }
 
 .LabeltextModal {
     font-family: 'Quicksand';
     font-size: 16px;
     font-weight: normal;
-    color: #022d09df;
+    color: #1883ba;
     text-align: center;
 }
 
@@ -174,5 +175,54 @@
         display: none;
     }
 }
+/**************************/
+.imageHolder {
+    width: 60%;
+    display: block;
+    flex: 0 0 60%;
+    max-width: 900px;
+    height: 70vmin;
+}
+.recentPredictions {
+    margin-top: 100%;
+    margin: 40px 0 0;
+    background: #ffffff;
+    padding: 10px;
+}
+/**************************/
+.boton_personalizado{  
+    position: absolute;
+    margin-block-end: auto;
+    border-top: 1px;  
+    font-weight: 500;
+    font-size: 15;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 10px;
+    border: 2px solid #0016b0;
+    margin: 4px;
+  }
 
+  .boton_personalizado:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+  }
 
+  table {
+    padding: 0px;
+    margin-top: -30%;
+    margin-left: 40%;
+    position: absolute;
+    width: 40%;
+    text-align: justify;
+    border-radius: 7px;    
+    vertical-align: top;
+    border: 1px solid #0016b0;
+ }
+
+ .linea {
+  border-top: 1px solid #0016b0;
+  height: 2px;
+  padding: 0;
+  margin: 30px;
+}

@@ -106,7 +106,7 @@ const Login = () => {
                     <div className='Login'>
                         <div className='LoginHigher' />
                         <div className='LoginLower'>
-                            <Title text='(Iniciar Sesion)' />
+                            <Title text='Iniciar Sesion' />
 
                             { hasErrors &&
                                 <ModalError

@@ -1,0 +1,334 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.inputHolder {
+    margin: 15px 0;
+}
+
+
+
+.mainContent {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
+}
+
+.inputHolder { 
+    padding: 0 10px;
+    display: flex; 
+
+    input[type='text'] {
+        max-width: 400px;
+        width: 100%;
+        padding: 5px 10px;
+        font-size: 16px;
+        border-radius: 0;
+        display: inline-block;
+        border: 1px solid #222;
+        outline: none;
+    }
+
+    .uploadInput { 
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .or {
+        align-items: center;
+        display: inline-flex;
+        padding: 0 20px;
+    }
+
+    .uploadImage {
+        padding: 8px 16px;
+        font-size: 16px;
+        background: #333;
+        color: #fff;
+        display: inline-block;
+        border: 0;
+        border-radius: 0;
+        cursor: pointer;
+        outline: none;
+    }
+}
+
+.imageHolder {
+    width: 60%;
+    display: block;
+    flex: 0 0 60%;
+    max-width: 900px;
+    height: 70vmin;
+
+    @media (max-width: 800px) {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    &:empty {
+        display: none;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.resultsHolder {
+    padding: 30px;
+
+    @media (max-width: 800px) {
+        width: 100%;
+        padding: 0;
+    }
+
+    .result {
+        border: 1px solid #333;
+        margin: 0 0 10px;
+        padding: 10px;
+
+        &:first-of-type {
+            border-color: #333;
+            background-color: #333;
+
+            .name { color: #fff; }
+            .confidence { color: #dfdfdf; }
+        }
+
+        .name {
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .confidence {
+            display: block;
+            font-weight: 300;
+
+            .bestGuess {
+                background: #fff;
+                padding: 2px 6px;
+                color: #333;
+                margin-left: 3px;
+            }
+        }
+    }
+}
+
+.recentPredictions {
+    margin: 40px 0 0;
+    background: #ffffff;
+    font-family: 'Ayla';
+    color: #2173bc;
+    padding: 10px;
+
+    h2 {
+        color: #111;
+        font-size: 26px;
+        margin: 10px 0;
+    }
+    
+    .recentImages {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .recentPrediction {
+        flex: 0 0 20%;
+        cursor: pointer;
+
+        @media (max-width: 1100px) {
+            flex: 0 0 25%;
+        }
+
+        @media (max-width: 870px) {
+            flex: 0 0 33.3%;
+        }
+
+        @media (max-width: 700px) {
+            flex: 0 0 50%;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+
+            @media (max-width: 700px) {
+                height: 260px;
+            }
+        }
+    }
+}
+/**********************************************************/
+.NavigationBarContainer {
+    width: 100%;
+    height: 45px;
+    background: #1883ba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NavigationBarImg {
+    width: 20px;
+    height: 20px;
+    z-index: 2
+}
+
+.sectionLogOut {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.NavigationBarLabel {
+    font-family: 'Ayla';
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sectionLogOut:hover {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #1883ba;
+    opacity: 0.6;
+}
+.boton_personalizado{  
+    position: absolute;
+    margin-block-end: auto;
+    border-top: 1px;  
+    font-weight: 500;
+    font-size: 18;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 8px;
+    border: 2px solid #0016b0;
+    margin: 4px;
+  }
+
+  .boton_personalizado:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+  }
+  table {    
+    margin-top:5px;
+    font-family: 'Quicksand';
+    padding: 0px;
+    margin-left: -40%;
+    width: 130%;
+    text-align: justify;
+    border-radius: 7px;    
+    vertical-align: top;
+    border: 1px solid #0016b0;
+ }
+ .img{
+    margin-left: 1%;
+    width:50%;
+    height:50%;
+}
+
+.sectionMenu {
+    width: 70%;
+}
+
+.CancelButton {
+    width: 100%;
+    height: 45px;
+    background: #1883ba;
+    color: #ffffff;
+    font-family: 'Quicksand';
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    opacity: 0.7;
+    outline: none;
+}
+
+.AceptButton {
+    width: 100%;
+    height: 45px;
+    background: #1883ba;
+    color: #ffffff;
+    font-family: 'Quicksand';
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+
+.buttonContainer {
+    display: flex;
+    width: 30%;
+    height: 100px;
+    box-sizing: border-box;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.AceptButtonContainer {
+    width: 40%;
+}
+
+.CancelButtonContainer {
+    width: 40%;
+}
+
+.LabeltextModal {
+    font-family: 'Quicksand';
+    font-size: 16px;
+    font-weight: normal;
+    color: #1883ba;
+    text-align: center;
+}
+
+@media screen and (min-width: 1030px) {
+    .HomeBody {
+        width: 50%;
+        height: 100%;
+        margin: auto;
+        padding: 0;
+    }
+    .Home {
+        display: none;
+    }
+}

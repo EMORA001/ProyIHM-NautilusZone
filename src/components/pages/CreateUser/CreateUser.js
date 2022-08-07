@@ -131,7 +131,7 @@ const CreateUser = () => {
                     
                     <div className='formCreateUser'>
 
-                    { screenWidth > 1030 && <Title text='(new user)' /> }
+                    { screenWidth > 1030 && <Title text='Registro Nuevo Usuario' /> }
 
                         <Item text='Email' />
                         <Input 
