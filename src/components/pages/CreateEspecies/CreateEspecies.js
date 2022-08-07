@@ -92,9 +92,7 @@ const Home = () => {
         <div className="App">
 			<NavigationBar text='Registro de Especies'/>
             <div className='inputHolder'>
-                <input type='file' accept='image/*' capture='camera' class='boton_personalizado'onChange={uploadImage} ref={fileInputRef} />
- 
- 
+                <input type='file' accept='image/*' capture='camera' class='boton_personalizado'onChange={uploadImage} ref={fileInputRef} /> 
                 <div ref={textInputRef} onChange={handleOnChange} />
             </div>
             <div className="mainWrapper">
@@ -107,7 +105,7 @@ const Home = () => {
                             return (
                                 <div className='result' key={result.className}>
 									<table class='table'>
-										<tr><span className='name'>{result.className}</span></tr>
+									<tr ><span className='name'>{result.className}</span></tr>
 										<tr><span className='confidence'>Nivel de confiabilidad:: {(result.probability * 100).toFixed(2)}% {index === 0 && <span className='bestGuess'>Best Guess</span>}</span></tr>
 									</table>
                                 </div>
@@ -117,13 +115,13 @@ const Home = () => {
                 </div>
                 {imageURL && <button class='boton_personalizado' onClick={identify}>Analizar Imagen</button>}
             </div>
-            {history.length > 0 && <div className="recentPredictions">
-				<hr></hr><br></br>
+            {history.length > 0 && <div className="recentPredictions"><br></br><br></br>
+				<hr></hr>
                 <h2 >Imagenes Recientes</h2> 
-                <div className="recentImages"><br></br>
+                <div><br></br><br></br>
                     {history.map((image, index) => {
                         return (
-                            <div className="recentPrediction" key={`${image}${index}`}>
+                            <div className="recentImages" key={`${image}${index}`}>
                                 <img src={image} alt='Recent Prediction' onClick={() => setImageURL(image)}margin-left="3%" width="10%"  />
                             </div>
                         )

@@ -38,67 +38,13 @@ code {
 .inputHolder { 
     padding: 0 10px;
     display: flex; 
-
-    input[type='text'] {
-        max-width: 400px;
-        width: 100%;
-        padding: 5px 10px;
-        font-size: 16px;
-        border-radius: 0;
-        display: inline-block;
-        border: 1px solid #222;
-        outline: none;
-    }
-
-    .uploadInput { 
-        width: 0px;
-        height: 0px;
-        visibility: hidden;
-        opacity: 0;
-    }
-
-    .or {
-        align-items: center;
-        display: inline-flex;
-        padding: 0 20px;
-    }
-
-    .uploadImage {
-        padding: 8px 16px;
-        font-size: 16px;
-        background: #333;
-        color: #fff;
-        display: inline-block;
-        border: 0;
-        border-radius: 0;
-        cursor: pointer;
-        outline: none;
-    }
 }
-
 .imageHolder {
     width: 60%;
     display: block;
     flex: 0 0 60%;
     max-width: 900px;
     height: 70vmin;
-
-    @media (max-width: 800px) {
-        width: 100%;
-        height: auto;
-        margin-bottom: 15px;
-    }
-
-    &:empty {
-        display: none;
-    }
-
-    img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
 }
 
 .resultsHolder {
@@ -109,37 +55,22 @@ code {
         padding: 0;
     }
 
-    .result {
-        border: 1px solid #333;
-        margin: 0 0 10px;
-        padding: 10px;
-
-        &:first-of-type {
-            border-color: #333;
-            background-color: #333;
-
-            .name { color: #fff; }
-            .confidence { color: #dfdfdf; }
-        }
-
-        .name {
-            font-size: 20px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .confidence {
-            display: block;
-            font-weight: 300;
-
-            .bestGuess {
-                background: #fff;
-                padding: 2px 6px;
-                color: #333;
-                margin-left: 3px;
-            }
-        }
-    }
+}
+.bestGuess {
+    padding: 2px 6px;
+    color: rgb(243, 12, 12);
+    margin-left: 3px;
+}
+.confidence {
+    display: block;
+    font-weight: 300;
+    color: #1883ba; 
+}
+.name {       
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Quicksand';
+    color: #0016b0;
 }
 
 .recentPredictions {
@@ -148,16 +79,15 @@ code {
     font-family: 'Ayla';
     color: #2173bc;
     padding: 10px;
-
-    h2 {
-        color: #111;
-        font-size: 26px;
-        margin: 10px 0;
+    font-size: 15px;
+    margin: 10px 0;
+    padding: 1em;
     }
     
     .recentImages {
         display: flex;
         flex-wrap: wrap;
+       
     }
 
     .recentPrediction {
@@ -176,18 +106,9 @@ code {
             flex: 0 0 50%;
         }
 
-        img {
-            display: block;
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-
-            @media (max-width: 700px) {
-                height: 260px;
-            }
-        }
+        
     }
-}
+
 /**********************************************************/
 .NavigationBarContainer {
     width: 100%;
@@ -235,8 +156,6 @@ code {
 }
 .boton_personalizado{  
     position: absolute;
-    margin-block-end: auto;
-    border-top: 1px;  
     font-weight: 500;
     font-size: 18;
     color: #ffffff;
@@ -250,21 +169,25 @@ code {
     color: #1883ba;
     background-color: #ffffff;
   }
-  table {    
+  
+  table {       
     margin-top:5px;
     font-family: 'Quicksand';
     padding: 0px;
     margin-left: -40%;
     width: 130%;
     text-align: justify;
-    border-radius: 7px;    
+    border-radius: 9px;    
     vertical-align: top;
     border: 1px solid #0016b0;
  }
- .img{
-    margin-left: 1%;
+ .img{  
+    margin-left: 5%;
+    margin-top: 5%;
     width:50%;
     height:50%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .sectionMenu {
